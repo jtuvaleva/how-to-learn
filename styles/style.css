@@ -14,6 +14,7 @@
   background-color: #f2f2f2;
   position: relative;
   display: flex;
+  z-index: 1;
 }
 
 .logo_place_header {
@@ -29,9 +30,9 @@
   font-size: 102px;
   font-weight: 700;
   width: 730px;
-  position: absolute;
-  left: 64px;
-  align-self: center;
+  display: flex;
+  padding-left: 64px;
+  align-items: center;
   z-index: 1;
 }
 
@@ -40,14 +41,17 @@
   font-size: 18px;
   font-weight: normal;
   position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
   width: 388px;
   left: 64px;
   bottom: 30px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -56,7 +60,7 @@
   height: 608px;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .header__square-pic {
@@ -67,7 +71,7 @@
   align-items: flex-end;
   top: 64px;
   right: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* Description */
@@ -105,14 +109,19 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.two-columns__paragraph:last-child {
+  margin: 0;
 }
 
 .two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
 /* Digits */
@@ -173,18 +182,16 @@
 /* Feynman */
 .feynman {
   padding-top: 100px;
-  height: 790px;
+  min-height: 790px;
   position: relative;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   background-color: #f2f2f2;
   background-image: url('../images/feynman.png');
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 867px 637px;
-}
-
-.feynman__headers {
-  margin: 0 auto;
 }
 
 .feynman__title {
@@ -193,7 +200,7 @@
   font-weight: 700;
   text-align: center;
   width: 648px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .feynman__subtitle {
@@ -201,7 +208,8 @@
   font-size: 36px;
   font-weight: normal;
   text-align: center;
-  margin: 70px 0 0 0;
+  margin: auto;
+  margin-top: 70px;
 }
 
 .feynman__link {
@@ -212,6 +220,7 @@
   font-size: 36px;
   font-weight: normal;
   color: #2f80ed;
+  text-decoration: none;
 }
 
 /* Kaufman */
@@ -225,12 +234,12 @@
 }
 
 .kaufman__triangle {
-  height: 877px;
   width: 877px;
+  height: 877px;
   position: absolute;
-  margin: 0;
+  background-image: url('../images/kaufman-triangle.svg');
+  top: 0;
   right: -210px;
-  z-index: 0;
 }
 
 .section-title_theme_dark {
@@ -306,6 +315,7 @@
 
 .footer__column-links {
   padding: 20px 0 16px 0;
+  list-style-type: none;
 }
 
 .footer__column-link {
