@@ -305,6 +305,8 @@
   font-size: 18px;
   font-weight: normal;
   padding: 18px 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .footer__column-heading {
@@ -317,6 +319,8 @@
 .footer__column-links {
   padding: 20px 0 16px 0;
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .footer__column-link {
