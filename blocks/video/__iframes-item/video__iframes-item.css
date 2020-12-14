@@ -1,0 +1,7 @@
+.video__iframes-item {
+  padding: 0 20px 0 0;
+}
+
+.video__iframes-item:last-child{
+  padding: 0;
+}
